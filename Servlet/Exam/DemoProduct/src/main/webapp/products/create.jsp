@@ -46,13 +46,13 @@
             <div class="row mb-3">
                 <label class="col-3" for="">Description: </label>
                 <div class="col-9">
-                    <input type="text" class="form-control" name="email"/>
+                    <input type="text" class="form-control" name="description"/>
                 </div>
             </div>
             <div class="row mb-3">
                 <label class="col-3" for="">Price: </label>
                 <div class="col-9">
-                    <input type="text" class="form-control" name="address"/>
+                    <input type="text" class="form-control" name="price"/>
                 </div>
             </div>
             <div class="row mb-3">
@@ -65,7 +65,7 @@
                 <label class="col-3" for="">Category: </label>
                 <div class="col-9">
                     <select name="category">
-                        <c:forEach items="${requestScope.categories}" var="ct">
+                        <c:forEach items="${requestScope.category}" var="ct">
                             <option value="${ct.getId()}">${ct.getName()}</option>
                         </c:forEach>
                     </select>

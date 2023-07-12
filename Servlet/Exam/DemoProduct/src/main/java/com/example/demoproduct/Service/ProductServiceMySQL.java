@@ -12,7 +12,7 @@ import java.util.List;
 public class ProductServiceMySQL implements IProductService {
 
     private static final String FIND_ALL_PRODUCTS = "SELECT p.*, ct.id as id_cate, ct.name as name_cate FROM product as p JOIN category as ct ON p.id_category = ct.id;";
-    private static final String FIND_BY_ID = "SELECT p.*, ct.id as id_cate, ct.name as name_cate FROM product as p JOIN category as ct ON p.id_category = ct.id; where p.id  = ?;" ;
+    private static final String FIND_BY_ID = "SELECT p.*, ct.id as id_cate, ct.name as name_cate FROM product as p JOIN category as ct ON p.id_category = ct.id where p.id  = ?;";
     private String jdbcURL = "jdbc:mysql://localhost:3306/product?useSSL=false";
     private String jdbcUsername = "root";
     private String jdbcPassword = "voquangminh";

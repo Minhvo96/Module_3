@@ -62,7 +62,6 @@
                 <th>Description</th>
                 <th>Price</th>
                 <th>Create At</th>
-                <th></th>
                 <th>Action</th>
             </tr>
             </thead>

@@ -65,7 +65,7 @@
           <label class="col-3" for="">Category: </label>
           <div class="col-9">
             <select name="category">
-              <c:forEach items="${requestScope.categories}" var="ct">
+              <c:forEach items="${categories}" var="ct">
                 <option ${ product.getCategory().getId() == ct.getId() ? 'selected' : ''} value="${ct.getId()}">${ct.getName()}</option>
               </c:forEach>
             </select>

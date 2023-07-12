@@ -29,6 +29,9 @@ public class ProductServlet extends HttpServlet {
         //localhost:8080/customers?action=edit&id=2
         //localhost:8080/customers?action=delete&id=2
         //localhost:8080/customers?action=advavd            // show list
+        resp.setCharacterEncoding("UTF-8");
+        req.setCharacterEncoding("UTF-8");
+
         String action = req.getParameter("action");
         if (action == null) {
             action = "";
@@ -89,6 +92,8 @@ public class ProductServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setCharacterEncoding("UTF-8");
+        req.setCharacterEncoding("UTF-8");
         String action = req.getParameter("action");
         if (action == null) {
             action = "";
@@ -132,7 +137,10 @@ public class ProductServlet extends HttpServlet {
     private void saveProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
         String description = req.getParameter("description");
-        BigDecimal price = new BigDecimal(req.getParameter("price"));
+
+        String priceString = req.getParameter("price");
+        BigDecimal price = new BigDecimal(priceString);
+
         String createAtStr = req.getParameter("createAt");
         LocalDate createAt = LocalDate.parse(createAtStr);
 
