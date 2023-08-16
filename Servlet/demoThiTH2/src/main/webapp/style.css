@@ -1,0 +1,11 @@
+.error {
+    color: red;
+    display: none;
+}
+.input-custom:invalid[focused="true"]~span {
+    display: block;
+}
+
+img {
+    width: 50px;
+}
